@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+.container {
+  background-color: #49373775;
+  min-height: calc(100vh - 110px);
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding: 32px 20%;
+
+  &_title {
+    color: #3a3a3a;
+    font-weight: 900;
+    font-size: 2em;
+    text-transform: uppercase;
+  }
+
+  &_subtitle {
+    font-weight: 600;
+    font-size: 1.1em;
+    color: #4a4a4a;
+  }
+
+  &_card {
+    margin: 16px 0;
+    padding: 16px;
+    border-radius: 4px;
+    background-color: #16101075;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    width: 85%;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.8);
+
+    &__form {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      padding: 8px 16px;
+    }
+
+    &__inventory {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      padding: 8px 16px;
+    }
+
+    &__counter {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    &__amount {
+      border-top-right-radius: 4px;
+      border-top-left-radius: 4px;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #16101075;
+      border-bottom: 3px solid #f0f0f0;
+      font-size: 2em;
+      font-weight: 900;
+      margin-left: 16px;
+      color: #f0f0f0;
+      font-family: 'Shadows Into Light', cursive;
+    }
+
+    &__title {
+      font-size: 1.75em;
+      font-weight: 600;
+      color: #d3d3d3;
+      text-align: center;
+      text-transform: uppercase;
+    }
+  }
+
+  &_actions {
+    display: flex;
+    justify-content: flex-start;
+  }
+}

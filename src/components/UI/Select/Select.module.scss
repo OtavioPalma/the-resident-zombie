@@ -1,0 +1,15 @@
+.select {
+  font-family: 'Source Sans Pro', sans-serif;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  padding: 12px 16px;
+  border: none;
+  border-bottom: 3px solid #f0f0f0;
+  font-size: 1.3em;
+  background-color: #16101075;
+  color: #f0f0f0;
+
+  &:focus {
+    outline: none;
+  }
+}
