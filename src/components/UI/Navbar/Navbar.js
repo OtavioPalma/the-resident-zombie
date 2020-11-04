@@ -14,10 +14,10 @@ export const Navbar = () => {
 
       <ul className={classes.container_list}>
         <li>
-          <Link to="/new">Add Survivor</Link>
+          <Link to="/survivor">Add Survivor</Link>
         </li>
         <li>
-          <Link to="/update">Update Location</Link>
+          <Link to="/location">Update Location</Link>
         </li>
         <li>
           <Link to="/flag">Flag Survivor</Link>
