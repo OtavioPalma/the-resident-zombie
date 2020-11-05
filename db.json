@@ -1,80 +1,542 @@
 {
   "people": [
     {
-      "id": "d52dbeb4-77fb-4214-b339-2371fd74f4a6",
+      "id": "e5a3760d-e5f4-4f63-9454-56514c111f12",
       "name": "Otavio",
-      "age": 22,
+      "age": "22",
       "gender": "male",
-      "lat": "45.5686",
-      "long": "27.5651",
+      "lat": "-55",
+      "long": "56",
       "inventory": [
         {
-          "resource_id": "273b2183-a55d-4807-9f45-ab2e6372357a",
+          "id": "273b2183-a55d-4807-9f45-ab2e6372357a",
+          "name": "Fiji Water",
           "amount": 10
         },
         {
-          "resource_id": "2541c5f5-77c4-4294-893e-cf69cb75742e",
-          "amount": 15
-        },
-        {
-          "resource_id": "d67ab37b-7937-4f59-8346-d798a4d85793",
+          "id": "2541c5f5-77c4-4294-893e-cf69cb75742e",
+          "name": "Campbell Soup",
           "amount": 10
         },
         {
-          "resource_id": "b0b5d21a-8791-4c77-b19d-027022d5a1c2",
+          "id": "d67ab37b-7937-4f59-8346-d798a4d85793",
+          "name": "First Aid Pouch",
+          "amount": 10
+        },
+        {
+          "id": "b0b5d21a-8791-4c77-b19d-027022d5a1c2",
+          "name": "AK47",
           "amount": 10
         }
       ]
     },
     {
-      "id": "7933901e-2ab3-4bac-9766-9ba6572e4a0c",
+      "id": "aa67dc9d-69e6-4248-a77f-49ef3b7adb81",
       "name": "Giovanna",
-      "age": 23,
+      "age": "23",
       "gender": "female",
-      "lat": "45.5686",
-      "long": "27.5651",
+      "lat": "-55.12",
+      "long": "-21.45",
       "inventory": [
         {
-          "resource_id": "273b2183-a55d-4807-9f45-ab2e6372357a",
+          "id": "273b2183-a55d-4807-9f45-ab2e6372357a",
+          "name": "Fiji Water",
           "amount": 10
         },
         {
-          "resource_id": "2541c5f5-77c4-4294-893e-cf69cb75742e",
-          "amount": 15
-        },
-        {
-          "resource_id": "d67ab37b-7937-4f59-8346-d798a4d85793",
+          "id": "2541c5f5-77c4-4294-893e-cf69cb75742e",
+          "name": "Campbell Soup",
           "amount": 10
         },
         {
-          "resource_id": "b0b5d21a-8791-4c77-b19d-027022d5a1c2",
+          "id": "d67ab37b-7937-4f59-8346-d798a4d85793",
+          "name": "First Aid Pouch",
+          "amount": 10
+        },
+        {
+          "id": "b0b5d21a-8791-4c77-b19d-027022d5a1c2",
+          "name": "AK47",
           "amount": 10
         }
       ]
     },
     {
-      "id": "f9ab7bac-4484-4435-b906-f52621f928aa",
+      "id": "4e02b95a-e558-4fd2-9432-ce1c5679930a",
       "name": "Henry",
-      "age": 17,
+      "age": "17",
       "gender": "male",
-      "lat": "45.5686",
-      "long": "27.5651",
+      "lat": "-55.12",
+      "long": "-21.45",
       "inventory": [
         {
-          "resource_id": "273b2183-a55d-4807-9f45-ab2e6372357a",
+          "id": "273b2183-a55d-4807-9f45-ab2e6372357a",
+          "name": "Fiji Water",
           "amount": 10
         },
         {
-          "resource_id": "2541c5f5-77c4-4294-893e-cf69cb75742e",
+          "id": "2541c5f5-77c4-4294-893e-cf69cb75742e",
+          "name": "Campbell Soup",
+          "amount": 10
+        },
+        {
+          "id": "d67ab37b-7937-4f59-8346-d798a4d85793",
+          "name": "First Aid Pouch",
+          "amount": 10
+        },
+        {
+          "id": "b0b5d21a-8791-4c77-b19d-027022d5a1c2",
+          "name": "AK47",
+          "amount": 10
+        }
+      ]
+    },
+    {
+      "id": "9c8b23a1-2a30-400c-bcf2-d180bbdb11f1",
+      "name": "Carl",
+      "age": "54",
+      "gender": "non_binary",
+      "lat": "-55.12",
+      "long": "-21.45",
+      "inventory": [
+        {
+          "id": "273b2183-a55d-4807-9f45-ab2e6372357a",
+          "name": "Fiji Water",
+          "amount": 10
+        },
+        {
+          "id": "2541c5f5-77c4-4294-893e-cf69cb75742e",
+          "name": "Campbell Soup",
+          "amount": 10
+        },
+        {
+          "id": "d67ab37b-7937-4f59-8346-d798a4d85793",
+          "name": "First Aid Pouch",
+          "amount": 10
+        },
+        {
+          "id": "b0b5d21a-8791-4c77-b19d-027022d5a1c2",
+          "name": "AK47",
+          "amount": 10
+        }
+      ]
+    },
+    {
+      "id": "b420bdde-0714-410a-8cde-d96b17b6cf35",
+      "name": "Stuart",
+      "age": "25",
+      "gender": "male",
+      "lat": "-55.12",
+      "long": "-21.45",
+      "inventory": [
+        {
+          "id": "273b2183-a55d-4807-9f45-ab2e6372357a",
+          "name": "Fiji Water",
+          "amount": 10
+        },
+        {
+          "id": "2541c5f5-77c4-4294-893e-cf69cb75742e",
+          "name": "Campbell Soup",
+          "amount": 10
+        },
+        {
+          "id": "d67ab37b-7937-4f59-8346-d798a4d85793",
+          "name": "First Aid Pouch",
+          "amount": 10
+        },
+        {
+          "id": "b0b5d21a-8791-4c77-b19d-027022d5a1c2",
+          "name": "AK47",
+          "amount": 10
+        }
+      ]
+    },
+    {
+      "id": "34d7f480-4668-4861-a4ef-ef9158345d49",
+      "name": "George",
+      "age": "35",
+      "gender": "male",
+      "lat": "55.25",
+      "long": "22.36",
+      "inventory": [
+        {
+          "id": "273b2183-a55d-4807-9f45-ab2e6372357a",
+          "name": "Fiji Water",
+          "amount": 10
+        },
+        {
+          "id": "2541c5f5-77c4-4294-893e-cf69cb75742e",
+          "name": "Campbell Soup",
+          "amount": 10
+        },
+        {
+          "id": "d67ab37b-7937-4f59-8346-d798a4d85793",
+          "name": "First Aid Pouch",
+          "amount": 10
+        },
+        {
+          "id": "b0b5d21a-8791-4c77-b19d-027022d5a1c2",
+          "name": "AK47",
+          "amount": 10
+        }
+      ]
+    },
+    {
+      "id": "7d01a536-8357-45db-afb8-887891a0e394",
+      "name": "Trump",
+      "age": "88",
+      "gender": "male",
+      "lat": "55",
+      "long": "54.23",
+      "inventory": [
+        {
+          "id": "273b2183-a55d-4807-9f45-ab2e6372357a",
+          "name": "Fiji Water",
+          "amount": 1
+        },
+        {
+          "id": "2541c5f5-77c4-4294-893e-cf69cb75742e",
+          "name": "Campbell Soup",
+          "amount": 1
+        },
+        {
+          "id": "d67ab37b-7937-4f59-8346-d798a4d85793",
+          "name": "First Aid Pouch",
+          "amount": 1
+        },
+        {
+          "id": "b0b5d21a-8791-4c77-b19d-027022d5a1c2",
+          "name": "AK47",
+          "amount": 1
+        }
+      ]
+    },
+    {
+      "id": "ad73d132-2623-45a3-a097-85e9681e7cb7",
+      "name": "Melanie",
+      "age": "45",
+      "gender": "female",
+      "lat": "55",
+      "long": "54.23",
+      "inventory": [
+        {
+          "id": "273b2183-a55d-4807-9f45-ab2e6372357a",
+          "name": "Fiji Water",
+          "amount": 1
+        },
+        {
+          "id": "2541c5f5-77c4-4294-893e-cf69cb75742e",
+          "name": "Campbell Soup",
+          "amount": 1
+        },
+        {
+          "id": "d67ab37b-7937-4f59-8346-d798a4d85793",
+          "name": "First Aid Pouch",
+          "amount": 1
+        },
+        {
+          "id": "b0b5d21a-8791-4c77-b19d-027022d5a1c2",
+          "name": "AK47",
+          "amount": 1
+        }
+      ]
+    },
+    {
+      "id": "4efd97ff-2b6d-49d0-a8bd-ca45c6215158",
+      "name": "Mark",
+      "age": "44",
+      "gender": "male",
+      "lat": "-55.45",
+      "long": "-25.36",
+      "inventory": [
+        {
+          "id": "273b2183-a55d-4807-9f45-ab2e6372357a",
+          "name": "Fiji Water",
+          "amount": 18
+        },
+        {
+          "id": "2541c5f5-77c4-4294-893e-cf69cb75742e",
+          "name": "Campbell Soup",
+          "amount": 13
+        },
+        {
+          "id": "d67ab37b-7937-4f59-8346-d798a4d85793",
+          "name": "First Aid Pouch",
           "amount": 15
         },
         {
-          "resource_id": "d67ab37b-7937-4f59-8346-d798a4d85793",
-          "amount": 10
+          "id": "b0b5d21a-8791-4c77-b19d-027022d5a1c2",
+          "name": "AK47",
+          "amount": 12
+        }
+      ]
+    },
+    {
+      "id": "3caca13b-6ac5-485c-9b25-69d2c98a29cf",
+      "name": "Mark",
+      "age": "44",
+      "gender": "male",
+      "lat": "-55.45",
+      "long": "-25.36",
+      "inventory": [
+        {
+          "id": "273b2183-a55d-4807-9f45-ab2e6372357a",
+          "name": "Fiji Water",
+          "amount": 18
         },
         {
-          "resource_id": "b0b5d21a-8791-4c77-b19d-027022d5a1c2",
-          "amount": 10
+          "id": "2541c5f5-77c4-4294-893e-cf69cb75742e",
+          "name": "Campbell Soup",
+          "amount": 13
+        },
+        {
+          "id": "d67ab37b-7937-4f59-8346-d798a4d85793",
+          "name": "First Aid Pouch",
+          "amount": 15
+        },
+        {
+          "id": "b0b5d21a-8791-4c77-b19d-027022d5a1c2",
+          "name": "AK47",
+          "amount": 12
+        }
+      ]
+    },
+    {
+      "id": "19e2723c-085e-4c83-b73a-aa46cf0d8c04",
+      "name": "Mark",
+      "age": "44",
+      "gender": "male",
+      "lat": "-55.45",
+      "long": "-25.36",
+      "inventory": [
+        {
+          "id": "273b2183-a55d-4807-9f45-ab2e6372357a",
+          "name": "Fiji Water",
+          "amount": 0
+        },
+        {
+          "id": "2541c5f5-77c4-4294-893e-cf69cb75742e",
+          "name": "Campbell Soup",
+          "amount": 0
+        },
+        {
+          "id": "d67ab37b-7937-4f59-8346-d798a4d85793",
+          "name": "First Aid Pouch",
+          "amount": 0
+        },
+        {
+          "id": "b0b5d21a-8791-4c77-b19d-027022d5a1c2",
+          "name": "AK47",
+          "amount": 0
+        }
+      ]
+    },
+    {
+      "id": "40daca1c-5b80-4de2-a8c7-d7ef3cfb0bd7",
+      "name": "Joanna",
+      "age": "25",
+      "gender": "female",
+      "lat": "-55.36",
+      "long": "-21.35",
+      "inventory": [
+        {
+          "id": "273b2183-a55d-4807-9f45-ab2e6372357a",
+          "name": "Fiji Water",
+          "amount": 13
+        },
+        {
+          "id": "2541c5f5-77c4-4294-893e-cf69cb75742e",
+          "name": "Campbell Soup",
+          "amount": 7
+        },
+        {
+          "id": "d67ab37b-7937-4f59-8346-d798a4d85793",
+          "name": "First Aid Pouch",
+          "amount": 11
+        },
+        {
+          "id": "b0b5d21a-8791-4c77-b19d-027022d5a1c2",
+          "name": "AK47",
+          "amount": 5
+        }
+      ]
+    },
+    {
+      "id": "2357b9e6-1688-4955-8c5b-f10427ee4481",
+      "name": "",
+      "age": "",
+      "gender": "",
+      "lat": "",
+      "long": "",
+      "inventory": [
+        {
+          "id": "273b2183-a55d-4807-9f45-ab2e6372357a",
+          "name": "Fiji Water",
+          "amount": 0
+        },
+        {
+          "id": "2541c5f5-77c4-4294-893e-cf69cb75742e",
+          "name": "Campbell Soup",
+          "amount": 0
+        },
+        {
+          "id": "d67ab37b-7937-4f59-8346-d798a4d85793",
+          "name": "First Aid Pouch",
+          "amount": 0
+        },
+        {
+          "id": "b0b5d21a-8791-4c77-b19d-027022d5a1c2",
+          "name": "AK47",
+          "amount": 0
+        }
+      ]
+    },
+    {
+      "id": "b407e71f-9521-4dd6-9ae0-5494137e4c61",
+      "name": "Romero",
+      "age": "28",
+      "gender": "male",
+      "lat": "-55.35",
+      "long": "-21.45",
+      "inventory": [
+        {
+          "id": "273b2183-a55d-4807-9f45-ab2e6372357a",
+          "name": "Fiji Water",
+          "amount": 12
+        },
+        {
+          "id": "2541c5f5-77c4-4294-893e-cf69cb75742e",
+          "name": "Campbell Soup",
+          "amount": 5
+        },
+        {
+          "id": "d67ab37b-7937-4f59-8346-d798a4d85793",
+          "name": "First Aid Pouch",
+          "amount": 8
+        },
+        {
+          "id": "b0b5d21a-8791-4c77-b19d-027022d5a1c2",
+          "name": "AK47",
+          "amount": 11
+        }
+      ]
+    },
+    {
+      "id": "967e1ebd-3aac-4206-94a5-cac91f708a09",
+      "name": "Sean",
+      "age": "58",
+      "gender": "male",
+      "lat": "-45.32",
+      "long": "-26.36",
+      "inventory": [
+        {
+          "id": "273b2183-a55d-4807-9f45-ab2e6372357a",
+          "name": "Fiji Water",
+          "amount": 5
+        },
+        {
+          "id": "2541c5f5-77c4-4294-893e-cf69cb75742e",
+          "name": "Campbell Soup",
+          "amount": 14
+        },
+        {
+          "id": "d67ab37b-7937-4f59-8346-d798a4d85793",
+          "name": "First Aid Pouch",
+          "amount": 5
+        },
+        {
+          "id": "b0b5d21a-8791-4c77-b19d-027022d5a1c2",
+          "name": "AK47",
+          "amount": 4
+        }
+      ]
+    },
+    {
+      "id": "872e31fd-2d42-4c45-82f2-625431dd7101",
+      "name": "Jeff",
+      "age": "29",
+      "gender": "male",
+      "lat": "-35.32",
+      "long": "-21.32",
+      "inventory": [
+        {
+          "id": "273b2183-a55d-4807-9f45-ab2e6372357a",
+          "name": "Fiji Water",
+          "amount": 16
+        },
+        {
+          "id": "2541c5f5-77c4-4294-893e-cf69cb75742e",
+          "name": "Campbell Soup",
+          "amount": 4
+        },
+        {
+          "id": "d67ab37b-7937-4f59-8346-d798a4d85793",
+          "name": "First Aid Pouch",
+          "amount": 6
+        },
+        {
+          "id": "b0b5d21a-8791-4c77-b19d-027022d5a1c2",
+          "name": "AK47",
+          "amount": 7
+        }
+      ]
+    },
+    {
+      "id": "5cef2941-5774-44cb-a8d1-59844491d60c",
+      "name": "",
+      "age": "",
+      "gender": "",
+      "lat": "",
+      "long": "",
+      "inventory": [
+        {
+          "id": "273b2183-a55d-4807-9f45-ab2e6372357a",
+          "name": "Fiji Water",
+          "amount": 0
+        },
+        {
+          "id": "2541c5f5-77c4-4294-893e-cf69cb75742e",
+          "name": "Campbell Soup",
+          "amount": 0
+        },
+        {
+          "id": "d67ab37b-7937-4f59-8346-d798a4d85793",
+          "name": "First Aid Pouch",
+          "amount": 0
+        },
+        {
+          "id": "b0b5d21a-8791-4c77-b19d-027022d5a1c2",
+          "name": "AK47",
+          "amount": 0
+        }
+      ]
+    },
+    {
+      "id": "4c96312b-a1dd-435e-b308-4f4bb5287f4e",
+      "name": "Carlton",
+      "age": "65",
+      "gender": "male",
+      "lat": "45.32",
+      "long": "45.32",
+      "inventory": [
+        {
+          "id": "273b2183-a55d-4807-9f45-ab2e6372357a",
+          "name": "Fiji Water",
+          "amount": 5
+        },
+        {
+          "id": "2541c5f5-77c4-4294-893e-cf69cb75742e",
+          "name": "Campbell Soup",
+          "amount": 8
+        },
+        {
+          "id": "d67ab37b-7937-4f59-8346-d798a4d85793",
+          "name": "First Aid Pouch",
+          "amount": 5
+        },
+        {
+          "id": "b0b5d21a-8791-4c77-b19d-027022d5a1c2",
+          "name": "AK47",
+          "amount": 11
         }
       ]
     }
@@ -105,6 +567,28 @@
     {
       "id": "b0b5d21a-8791-4c77-b19d-027022d5a1c2",
       "name": "AK47"
+    }
+  ],
+  "genders": [
+    {
+      "id": "32c476fc-6488-4df8-8942-80a7b3a509a6",
+      "name": "Survivor Gender",
+      "value": ""
+    },
+    {
+      "id": "3252dadd-3e42-45f9-88c1-53f63c187a22",
+      "name": "Male",
+      "value": "male"
+    },
+    {
+      "id": "60f9f003-36da-458f-ad20-8b29242cb4c2",
+      "name": "Female",
+      "value": "female"
+    },
+    {
+      "id": "24b74c9c-9888-4b93-9695-1ba9d2144a10",
+      "name": "Non Binary",
+      "value": "non_binary"
     }
   ]
 }

@@ -1,3 +1,8 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
 .select {
   font-family: 'Source Sans Pro', sans-serif;
   border-top-left-radius: 4px;
@@ -12,4 +17,18 @@
   &:focus {
     outline: none;
   }
+
+  &_error {
+    border-bottom: 3px solid #eedf0e;
+    color: #eedf0e;
+    &::placeholder {
+      color: #eedf0e;
+    }
+  }
+}
+
+.error {
+  font-size: 0.8em;
+  color: #eedf0e;
+  font-weight: 600;
 }
