@@ -271,66 +271,6 @@
       ]
     },
     {
-      "id": "3caca13b-6ac5-485c-9b25-69d2c98a29cf",
-      "name": "Mark",
-      "age": "44",
-      "gender": "male",
-      "lat": "-55.45",
-      "long": "-25.36",
-      "inventory": [
-        {
-          "id": "273b2183-a55d-4807-9f45-ab2e6372357a",
-          "name": "Fiji Water",
-          "amount": 18
-        },
-        {
-          "id": "2541c5f5-77c4-4294-893e-cf69cb75742e",
-          "name": "Campbell Soup",
-          "amount": 13
-        },
-        {
-          "id": "d67ab37b-7937-4f59-8346-d798a4d85793",
-          "name": "First Aid Pouch",
-          "amount": 15
-        },
-        {
-          "id": "b0b5d21a-8791-4c77-b19d-027022d5a1c2",
-          "name": "AK47",
-          "amount": 12
-        }
-      ]
-    },
-    {
-      "id": "19e2723c-085e-4c83-b73a-aa46cf0d8c04",
-      "name": "Mark",
-      "age": "44",
-      "gender": "male",
-      "lat": "-55.45",
-      "long": "-25.36",
-      "inventory": [
-        {
-          "id": "273b2183-a55d-4807-9f45-ab2e6372357a",
-          "name": "Fiji Water",
-          "amount": 0
-        },
-        {
-          "id": "2541c5f5-77c4-4294-893e-cf69cb75742e",
-          "name": "Campbell Soup",
-          "amount": 0
-        },
-        {
-          "id": "d67ab37b-7937-4f59-8346-d798a4d85793",
-          "name": "First Aid Pouch",
-          "amount": 0
-        },
-        {
-          "id": "b0b5d21a-8791-4c77-b19d-027022d5a1c2",
-          "name": "AK47",
-          "amount": 0
-        }
-      ]
-    },
-    {
       "id": "40daca1c-5b80-4de2-a8c7-d7ef3cfb0bd7",
       "name": "Joanna",
       "age": "25",
@@ -357,36 +297,6 @@
           "id": "b0b5d21a-8791-4c77-b19d-027022d5a1c2",
           "name": "AK47",
           "amount": 5
-        }
-      ]
-    },
-    {
-      "id": "2357b9e6-1688-4955-8c5b-f10427ee4481",
-      "name": "",
-      "age": "",
-      "gender": "",
-      "lat": "",
-      "long": "",
-      "inventory": [
-        {
-          "id": "273b2183-a55d-4807-9f45-ab2e6372357a",
-          "name": "Fiji Water",
-          "amount": 0
-        },
-        {
-          "id": "2541c5f5-77c4-4294-893e-cf69cb75742e",
-          "name": "Campbell Soup",
-          "amount": 0
-        },
-        {
-          "id": "d67ab37b-7937-4f59-8346-d798a4d85793",
-          "name": "First Aid Pouch",
-          "amount": 0
-        },
-        {
-          "id": "b0b5d21a-8791-4c77-b19d-027022d5a1c2",
-          "name": "AK47",
-          "amount": 0
         }
       ]
     },
@@ -477,36 +387,6 @@
           "id": "b0b5d21a-8791-4c77-b19d-027022d5a1c2",
           "name": "AK47",
           "amount": 7
-        }
-      ]
-    },
-    {
-      "id": "5cef2941-5774-44cb-a8d1-59844491d60c",
-      "name": "",
-      "age": "",
-      "gender": "",
-      "lat": "",
-      "long": "",
-      "inventory": [
-        {
-          "id": "273b2183-a55d-4807-9f45-ab2e6372357a",
-          "name": "Fiji Water",
-          "amount": 0
-        },
-        {
-          "id": "2541c5f5-77c4-4294-893e-cf69cb75742e",
-          "name": "Campbell Soup",
-          "amount": 0
-        },
-        {
-          "id": "d67ab37b-7937-4f59-8346-d798a4d85793",
-          "name": "First Aid Pouch",
-          "amount": 0
-        },
-        {
-          "id": "b0b5d21a-8791-4c77-b19d-027022d5a1c2",
-          "name": "AK47",
-          "amount": 0
         }
       ]
     },

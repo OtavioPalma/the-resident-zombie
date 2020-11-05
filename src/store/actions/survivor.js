@@ -65,3 +65,60 @@ export const initSurvivor = () => {
       });
   };
 };
+
+export const fetchSurvivorsStart = () => ({
+  type: actionTypes.FETCH_SURVIVORS_START,
+});
+
+export const fetchSurvivorsSuccess = payload => ({
+  type: actionTypes.FETCH_SURVIVORS_SUCCESS,
+  payload,
+});
+
+export const fetchSurvivorsFail = payload => ({
+  type: actionTypes.FETCH_SURVIVORS_FAIL,
+  payload,
+});
+
+export const fetchSurvivors = () => {
+  return dispatch => {
+    dispatch(fetchSurvivorsStart());
+
+    axios
+      .get('/people')
+      .then(res => {
+        dispatch(fetchSurvivorsSuccess({ survivors: res.data }));
+      })
+      .catch(err => {
+        dispatch(fetchSurvivorsFail({ error: err }));
+      });
+  };
+};
+
+export const updateSurvivorStart = () => ({
+  type: actionTypes.UPDATE_SURVIVOR_START,
+});
+
+export const updateSurvivorSuccess = () => ({
+  type: actionTypes.UPDATE_SURVIVOR_SUCCESS,
+});
+
+export const updateSurvivorFail = payload => ({
+  type: actionTypes.UPDATE_SURVIVOR_FAIL,
+  payload,
+});
+
+export const updateSurvivor = payload => {
+  return dispatch => {
+    dispatch(updateSurvivorStart());
+
+    axios
+      .put(`/people/${payload.survivor.id}`, payload.survivor)
+      .then(() => {
+        dispatch(updateSurvivorSuccess());
+      })
+      .catch(err => {
+        dispatch(updateSurvivorFail({ error: err }));
+      });
+  };
+};

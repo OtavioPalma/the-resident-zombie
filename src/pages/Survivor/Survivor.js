@@ -94,13 +94,13 @@ export const Survivor = () => {
     <div className={classes.container}>
       <span className={classes.container_title}>Register as a Survivor</span>
 
-      {success && <Toast message={'Survivor Registered!'} type="success" />}
-      {error && <Toast message={`Error: ${error}`} type="error" />}
-
       <span className={classes.container_subtitle}>
         Are you healthy and have items to trade? Connect with thousand of
         survivors!
       </span>
+
+      {success && <Toast message={'Survivor Registered!'} type="success" />}
+      {error && <Toast message={`Error: ${error}`} type="error" />}
 
       {loading && <Spinner />}
 

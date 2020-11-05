@@ -1,1 +1,6 @@
-export { addSurvivor, initSurvivor } from './survivor';
+export {
+  addSurvivor,
+  initSurvivor,
+  fetchSurvivors,
+  updateSurvivor,
+} from './survivor';

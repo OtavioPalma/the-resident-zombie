@@ -6,6 +6,7 @@ const initialState = {
   genders: null,
   resources: null,
   success: null,
+  survivors: null,
 };
 
 const addSurvivorStart = state => ({
@@ -52,6 +53,48 @@ const initSurvivorFail = (state, payload) => ({
   loading: false,
 });
 
+const fetchSurvivorsStart = state => ({
+  ...state,
+  error: null,
+  loading: true,
+  success: null,
+  survivors: null,
+});
+
+const fetchSurvivorsSuccess = (state, payload) => ({
+  ...state,
+  error: null,
+  loading: false,
+  survivors: payload.survivors,
+});
+
+const fetchSurvivorsFail = (state, payload) => ({
+  ...state,
+  error: payload.error,
+  loading: false,
+});
+
+const updateSurvivorStart = state => ({
+  ...state,
+  error: null,
+  loading: true,
+  success: null,
+});
+
+const updateSurvivorSuccess = state => ({
+  ...state,
+  error: null,
+  loading: false,
+  success: true,
+});
+
+const updateSurvivorFail = (state, payload) => ({
+  ...state,
+  error: payload.error,
+  loading: false,
+  success: null,
+});
+
 const reducer = (state = initialState, { type, payload }) => {
   switch (type) {
     case actionTypes.ADD_SURVIVOR_START:
@@ -66,6 +109,18 @@ const reducer = (state = initialState, { type, payload }) => {
       return initSurvivorSuccess(state, payload);
     case actionTypes.INIT_SURVIVOR_FAIL:
       return initSurvivorFail(state, payload);
+    case actionTypes.FETCH_SURVIVORS_START:
+      return fetchSurvivorsStart(state);
+    case actionTypes.FETCH_SURVIVORS_SUCCESS:
+      return fetchSurvivorsSuccess(state, payload);
+    case actionTypes.FETCH_SURVIVORS_FAIL:
+      return fetchSurvivorsFail(state, payload);
+    case actionTypes.UPDATE_SURVIVOR_START:
+      return updateSurvivorStart(state);
+    case actionTypes.UPDATE_SURVIVOR_SUCCESS:
+      return updateSurvivorSuccess(state);
+    case actionTypes.UPDATE_SURVIVOR_FAIL:
+      return updateSurvivorFail(state, payload);
     default:
       return state;
   }

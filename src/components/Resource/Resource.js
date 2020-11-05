@@ -13,7 +13,7 @@ export const Resource = props => {
 
       <IconButton content="+" handleClick={props.handleIncrease} />
 
-      <span className={classes.container_amount}>{props.amount}</span>
+      <span className={classes.container_amount}>x{props.amount}</span>
     </div>
   );
 };
