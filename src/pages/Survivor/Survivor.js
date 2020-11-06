@@ -15,6 +15,8 @@ import first_aid from '../../assets/icons/first_aid.svg';
 import ak_47 from '../../assets/icons/ak_47.svg';
 import { Resource } from '../../components/Resource/Resource';
 import { Toast } from '../../components/UI/Toast/Toast';
+import { Card } from '../../components/UI/Card/Card';
+import { Header } from '../../components/UI/Header/Header';
 
 export const Survivor = () => {
   const [survivor, setSurvivor] = useState({
@@ -91,13 +93,15 @@ export const Survivor = () => {
   };
 
   return (
-    <div className={classes.container}>
-      <span className={classes.container_title}>Register as a Survivor</span>
+    <div className="container">
+      <Header>
+        <span>Register as a Survivor</span>
 
-      <span className={classes.container_subtitle}>
-        Are you healthy and have items to trade? Connect with thousand of
-        survivors!
-      </span>
+        <span>
+          Are you healthy and have items to trade? Connect with thousand of
+          survivors!
+        </span>
+      </Header>
 
       {success && <Toast message={'Survivor Registered!'} type="success" />}
       {error && <Toast message={`Error: ${error}`} type="error" />}
@@ -105,9 +109,9 @@ export const Survivor = () => {
       {loading && <Spinner />}
 
       {genders && resources && (
-        <div className={classes.container_card}>
-          <div className={classes.container_card__form}>
-            <span className={classes.container_card__title}>Information</span>
+        <Card grid="1fr 1fr">
+          <div>
+            <span>Information</span>
 
             <Input
               name="name"
@@ -154,8 +158,8 @@ export const Survivor = () => {
             />
           </div>
 
-          <div className={classes.container_card__inventory}>
-            <span className={classes.container_card__title}>Inventory</span>
+          <div className={classes.card_inventory}>
+            <span>Inventory</span>
 
             <Resource
               handleDecrease={() => handleDecrease(0)}
@@ -188,16 +192,14 @@ export const Survivor = () => {
               icon={ak_47}
               amount={survivor?.inventory[3]?.amount}
             />
-          </div>
 
-          <div className={classes.container_actions}>
             <Button
               content="Create"
               status={loading}
               handleClick={handleSubmit}
             />
           </div>
-        </div>
+        </Card>
       )}
     </div>
   );

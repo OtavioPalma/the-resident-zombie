@@ -1,0 +1,17 @@
+.header {
+  display: flex;
+  flex-direction: column;
+
+  & > span:first-child {
+    color: #3a3a3a;
+    font-weight: 900;
+    font-size: 2em;
+    text-transform: uppercase;
+  }
+
+  & > span:last-child {
+    font-weight: 600;
+    font-size: 1.1em;
+    color: #4a4a4a;
+  }
+}

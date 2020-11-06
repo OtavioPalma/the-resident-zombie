@@ -12,12 +12,12 @@ export const Navbar = withRouter(props => {
   };
 
   return (
-    <div className={classes.container}>
-      <div className={classes.container_logo}>
+    <div className={classes.navbar}>
+      <div className={classes.navbar_logo}>
         <Logo handleClick={handleClick} />
       </div>
 
-      <ul className={classes.container_list}>
+      <ul className={classes.navbar_list}>
         <li>
           <Link to="/survivor">Add Survivor</Link>
         </li>

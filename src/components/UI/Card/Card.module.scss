@@ -1,0 +1,36 @@
+.card {
+  margin: 16px 0;
+  padding: 16px;
+  border-radius: 4px;
+  background-color: #16101075;
+  display: grid;
+  gap: 16px;
+  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
+    0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+
+  & > div {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 8px 16px;
+  }
+
+  & > div > span:first-child {
+    font-size: 1.75em;
+    font-weight: 600;
+    color: #f0f0f0;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  & > div > span:last-child {
+    font-weight: 600;
+    color: #d0d0d0;
+    text-align: center;
+  }
+
+  & > div > button {
+    margin-top: auto;
+    margin-left: auto;
+  }
+}

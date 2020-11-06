@@ -10,6 +10,8 @@ import { Button } from '../../components/UI/Button/Button';
 import { Toast } from '../../components/UI/Toast/Toast';
 import { SurvivorCard } from '../../components/SurvivorCard/SurvivorCard';
 import { TextField } from '../../components/UI/TextField/TextField';
+import { Card } from '../../components/UI/Card/Card';
+import { Header } from '../../components/UI/Header/Header';
 
 export const Location = () => {
   const [survivor, setSurvivor] = useState(null);
@@ -52,12 +54,12 @@ export const Location = () => {
   };
 
   return (
-    <div className={classes.container}>
-      <span className={classes.container_title}>Update your Location</span>
+    <div className="container">
+      <Header>
+        <span>Update your Location</span>
 
-      <span className={classes.container_subtitle}>
-        Update your current location so others can find you!
-      </span>
+        <span>Update your current location so others can find you!</span>
+      </Header>
 
       {success && <Toast message={'Survivor Updated!'} type="success" />}
       {error && <Toast message={`Error: ${error}`} type="error" />}
@@ -65,13 +67,11 @@ export const Location = () => {
       {loading && <Spinner />}
 
       {!loading && survivors && (
-        <div className={classes.container_card}>
+        <Card grid="3fr 2fr">
           <div>
-            <span className={classes.container_card__title}>
-              Survivors List
-            </span>
+            <span> Survivors List </span>
 
-            <div className={classes.container_card__list}>
+            <div className={classes.card_list}>
               {survivors.map(survivor => (
                 <SurvivorCard
                   survivor={survivor}
@@ -83,24 +83,20 @@ export const Location = () => {
           </div>
 
           <div>
-            <span className={classes.container_card__title}>
-              Survivor Location
-            </span>
+            <span> Survivor Location </span>
 
             {!survivor && (
-              <span className={classes.container_card__subtitle}>
-                Select yourself upon the list to update your location
-              </span>
+              <span>Select yourself upon the list to update your location</span>
             )}
 
             {survivor && (
               <Fragment>
-                <div className={classes.container_card__survivor}>
+                <div className={classes.card_survivor}>
                   <TextField>
                     {survivor.name}, {survivor.age}
                   </TextField>
 
-                  <div className={classes.container_card__survivor_input}>
+                  <div className={classes.card_survivor__input}>
                     <TextField>Lat</TextField>
                     <Input
                       name="lat"
@@ -111,7 +107,7 @@ export const Location = () => {
                     />
                   </div>
 
-                  <div className={classes.container_card__survivor_input}>
+                  <div className={classes.card_survivor__input}>
                     <TextField>Long</TextField>
                     <Input
                       name="long"
@@ -123,17 +119,15 @@ export const Location = () => {
                   </div>
                 </div>
 
-                <div className={classes.container_card__actions}>
-                  <Button
-                    content="Save"
-                    status={loading}
-                    handleClick={handleSubmit}
-                  />
-                </div>
+                <Button
+                  content="Save"
+                  status={loading}
+                  handleClick={handleSubmit}
+                />
               </Fragment>
             )}
           </div>
-        </div>
+        </Card>
       )}
     </div>
   );

@@ -1,80 +1,22 @@
-.container {
-  background-color: #49373775;
-  min-height: calc(100vh - 110px);
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
-  padding: 32px 20%;
-
-  &_title {
-    color: #3a3a3a;
-    font-weight: 900;
-    font-size: 2em;
-    text-transform: uppercase;
+.card {
+  &_list {
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 50vh;
   }
 
-  &_subtitle {
-    font-weight: 600;
-    font-size: 1.1em;
-    color: #4a4a4a;
-  }
-
-  &_card {
-    margin: 16px 0;
-    padding: 16px;
-    border-radius: 4px;
-    background-color: #16101075;
-    display: grid;
-    grid-template-columns: 3fr 2fr;
+  &_survivor {
+    display: flex;
+    flex-direction: column;
     gap: 16px;
-    box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
-      0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+    padding: 8px 16px;
 
-    & > div {
+    &__input {
       display: flex;
-      flex-direction: column;
+      align-items: center;
       gap: 16px;
-      padding: 8px 16px;
-    }
-
-    &__list {
-      overflow-y: scroll;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      max-height: 50vh;
-    }
-
-    &__survivor {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-      padding: 8px 16px;
-
-      &_input {
-        display: flex;
-        align-items: center;
-        gap: 16px;
-      }
-    }
-
-    &__title {
-      font-size: 1.75em;
-      font-weight: 600;
-      color: #f0f0f0;
-      text-align: center;
-      text-transform: uppercase;
-    }
-
-    &__subtitle {
-      font-weight: 600;
-      color: #d0d0d0;
-      text-align: center;
-    }
-
-    &__actions {
-      margin-top: auto;
-      margin-left: auto;
     }
   }
 }

@@ -4,10 +4,10 @@ import classes from './Select.module.scss';
 
 export const Select = props => {
   return (
-    <div className={classes.container}>
+    <div className={classes.select}>
       <select
         name={props.name}
-        className={`${classes.select} ${
+        className={`${
           props.error.includes(props.name) && classes.select_error
         }`}
         onChange={props.handleChange}
@@ -20,7 +20,7 @@ export const Select = props => {
         ))}
       </select>
       {props.error.includes(props.name) && (
-        <label className={classes.error}>Required field!</label>
+        <label className={classes.select_text}>Required field!</label>
       )}
     </div>
   );
