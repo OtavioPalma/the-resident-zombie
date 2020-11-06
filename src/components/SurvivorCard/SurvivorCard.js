@@ -6,9 +6,12 @@ import male from '../../assets/icons/male.svg';
 import female from '../../assets/icons/female.svg';
 import non_binary from '../../assets/icons/non_binary.svg';
 
-export const SurvivorCard = ({ survivor, handleClick, fullInfo }) => {
+export const SurvivorCard = ({ survivor, handleClick, fullInfo, selected }) => {
   return (
-    <div className={classes.container} onClick={handleClick}>
+    <div
+      className={`${classes.container} ${selected && classes.selected}`}
+      onClick={handleClick}
+    >
       <div>
         <img
           className={classes.container_icon}

@@ -72,12 +72,13 @@ export const Location = () => {
             <span> Survivors List </span>
 
             <div className={classes.card_list}>
-              {survivors.map(survivor => (
+              {survivors.map(surv => (
                 <SurvivorCard
                   fullInfo
-                  survivor={survivor}
-                  key={survivor.id}
-                  handleClick={() => handleSurvivor(survivor)}
+                  selected={survivor?.id === surv.id}
+                  survivor={surv}
+                  key={surv.id}
+                  handleClick={() => handleSurvivor(surv)}
                 />
               ))}
             </div>

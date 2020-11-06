@@ -89,13 +89,14 @@ export const Flag = () => {
                 <SurvivorCard
                   survivor={survivor}
                   key={survivor.id}
+                  selected={survivor.id === report.witness?.id}
                   handleClick={() => handleWitness(survivor)}
                 />
               ))}
             </div>
           </div>
 
-          {report.witness && (
+          {report.witness && reports && (
             <div>
               <span> Select a Suspect </span>
 
@@ -108,6 +109,7 @@ export const Flag = () => {
                         <SurvivorCard
                           survivor={survivor}
                           key={survivor.id}
+                          selected={survivor.id === report.suspect?.id}
                           handleClick={() => handleSuspect(survivor)}
                         />
                       );

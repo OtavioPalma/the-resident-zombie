@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import { NavLink, withRouter } from 'react-router-dom';
 
 import { Logo } from '../Logo/Logo';
 
@@ -19,19 +19,19 @@ export const Navbar = withRouter(props => {
 
       <ul className={classes.navbar_list}>
         <li>
-          <Link to="/survivor">Add Survivor</Link>
+          <NavLink to="/survivor">Add Survivor</NavLink>
         </li>
         <li>
-          <Link to="/location">Update Location</Link>
+          <NavLink to="/location">Update Location</NavLink>
         </li>
         <li>
-          <Link to="/flag">Flag Survivor</Link>
+          <NavLink to="/flag">Flag Survivor</NavLink>
         </li>
         <li>
-          <Link to="/trade">Trade Items</Link>
+          <NavLink to="/trade">Trade Items</NavLink>
         </li>
         <li>
-          <Link to="/reports">Reports</Link>
+          <NavLink to="/reports">Reports</NavLink>
         </li>
       </ul>
     </div>

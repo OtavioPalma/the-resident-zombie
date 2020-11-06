@@ -22,6 +22,16 @@ body {
   padding: 32px 20%;
 }
 
+.active {
+  color: #fff !important;
+  position: relative;
+
+  &::before {
+    visibility: visible !important;
+    transform: scaleX(1) !important;
+  }
+}
+
 ::-webkit-scrollbar {
   width: 15px;
 }
