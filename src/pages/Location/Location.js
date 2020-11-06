@@ -6,8 +6,10 @@ import * as actions from '../../store/actions/index';
 
 import { Spinner } from '../../components/UI/Spinner/Spinner';
 import { Input } from '../../components/UI/Input/Input';
-import { SurvivorCard } from '../../components/SurvivorCard/SurvivorCard';
 import { Button } from '../../components/UI/Button/Button';
+import { Toast } from '../../components/UI/Toast/Toast';
+import { SurvivorCard } from '../../components/SurvivorCard/SurvivorCard';
+import { TextField } from '../../components/UI/TextField/TextField';
 
 export const Location = () => {
   const [survivor, setSurvivor] = useState(null);
@@ -15,6 +17,8 @@ export const Location = () => {
 
   /* Redux Selectors */
   const loading = useSelector(state => state.survivor.loading);
+  const error = useSelector(state => state.survivor.error);
+  const success = useSelector(state => state.survivor.success);
   const survivors = useSelector(state => state.survivor.survivors);
 
   /* Redux Dispatchers */
@@ -55,9 +59,12 @@ export const Location = () => {
         Update your current location so others can find you!
       </span>
 
+      {success && <Toast message={'Survivor Updated!'} type="success" />}
+      {error && <Toast message={`Error: ${error}`} type="error" />}
+
       {loading && <Spinner />}
 
-      {survivors && (
+      {!loading && survivors && (
         <div className={classes.container_card}>
           <div>
             <span className={classes.container_card__title}>
@@ -89,14 +96,12 @@ export const Location = () => {
             {survivor && (
               <Fragment>
                 <div className={classes.container_card__survivor}>
-                  <div className={classes.container_card__survivor_input}>
-                    <span>
-                      {survivor.name}, {survivor.age}
-                    </span>
-                  </div>
+                  <TextField>
+                    {survivor.name}, {survivor.age}
+                  </TextField>
 
                   <div className={classes.container_card__survivor_input}>
-                    <span>Lat</span>
+                    <TextField>Lat</TextField>
                     <Input
                       name="lat"
                       type={'number'}
@@ -107,7 +112,7 @@ export const Location = () => {
                   </div>
 
                   <div className={classes.container_card__survivor_input}>
-                    <span>Long</span>
+                    <TextField>Long</TextField>
                     <Input
                       name="long"
                       type={'number'}

@@ -5,8 +5,8 @@
       "name": "Otavio",
       "age": "22",
       "gender": "male",
-      "lat": "-55",
-      "long": "56",
+      "lat": "-41.56",
+      "long": "23.45",
       "inventory": [
         {
           "id": "273b2183-a55d-4807-9f45-ab2e6372357a",
@@ -35,8 +35,8 @@
       "name": "Giovanna",
       "age": "23",
       "gender": "female",
-      "lat": "-55.12",
-      "long": "-21.45",
+      "lat": "-55.1",
+      "long": "-21.4",
       "inventory": [
         {
           "id": "273b2183-a55d-4807-9f45-ab2e6372357a",
@@ -65,8 +65,8 @@
       "name": "Henry",
       "age": "17",
       "gender": "male",
-      "lat": "-55.12",
-      "long": "-21.45",
+      "lat": "-55.55",
+      "long": "-21.21",
       "inventory": [
         {
           "id": "273b2183-a55d-4807-9f45-ab2e6372357a",

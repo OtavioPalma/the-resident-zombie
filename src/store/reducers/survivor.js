@@ -57,7 +57,6 @@ const fetchSurvivorsStart = state => ({
   ...state,
   error: null,
   loading: true,
-  success: null,
   survivors: null,
 });
 
@@ -84,14 +83,12 @@ const updateSurvivorStart = state => ({
 const updateSurvivorSuccess = state => ({
   ...state,
   error: null,
-  loading: false,
   success: true,
 });
 
 const updateSurvivorFail = (state, payload) => ({
   ...state,
   error: payload.error,
-  loading: false,
   success: null,
 });
 

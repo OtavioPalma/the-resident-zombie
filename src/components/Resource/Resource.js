@@ -3,6 +3,7 @@ import { IconButton } from '../UI/IconButton/IconButton';
 import { Item } from '../Item/Item';
 
 import classes from './Resource.module.scss';
+import { TextField } from '../UI/TextField/TextField';
 
 export const Resource = props => {
   return (
@@ -13,7 +14,7 @@ export const Resource = props => {
 
       <IconButton content="+" handleClick={props.handleIncrease} />
 
-      <span className={classes.container_amount}>x{props.amount}</span>
+      <TextField>x{props.amount}</TextField>
     </div>
   );
 };

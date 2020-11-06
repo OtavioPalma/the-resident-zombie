@@ -113,9 +113,10 @@ export const updateSurvivor = payload => {
     dispatch(updateSurvivorStart());
 
     axios
-      .put(`/people/${payload.survivor.id}`, payload.survivor)
+      .put(`/people/${payload.id}`, payload)
       .then(() => {
         dispatch(updateSurvivorSuccess());
+        dispatch(fetchSurvivors());
       })
       .catch(err => {
         dispatch(updateSurvivorFail({ error: err }));
