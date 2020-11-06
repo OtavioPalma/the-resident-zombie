@@ -4,3 +4,5 @@ export {
   fetchSurvivors,
   updateSurvivor,
 } from './survivor';
+
+export { flagSurvivor, fetchSurvivorReports } from './flag';

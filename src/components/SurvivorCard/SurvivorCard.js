@@ -6,7 +6,7 @@ import male from '../../assets/icons/male.svg';
 import female from '../../assets/icons/female.svg';
 import non_binary from '../../assets/icons/non_binary.svg';
 
-export const SurvivorCard = ({ survivor, handleClick }) => {
+export const SurvivorCard = ({ survivor, handleClick, fullInfo }) => {
   return (
     <div className={classes.container} onClick={handleClick}>
       <div>
@@ -22,21 +22,29 @@ export const SurvivorCard = ({ survivor, handleClick }) => {
         />
       </div>
 
-      <div>
+      {fullInfo ? (
+        <div>
+          <div className={classes.container_line}>
+            <span>Info:</span>
+            <span>
+              {survivor.name}, {survivor.age}
+            </span>
+          </div>
+
+          <div className={classes.container_line}>
+            <span>Location:</span>
+            <span>
+              {survivor.lat}, {survivor.long}
+            </span>
+          </div>
+        </div>
+      ) : (
         <div className={classes.container_line}>
-          <span>Info:</span>
           <span>
             {survivor.name}, {survivor.age}
           </span>
         </div>
-
-        <div className={classes.container_line}>
-          <span>Location:</span>
-          <span>
-            {survivor.lat}, {survivor.long}
-          </span>
-        </div>
-      </div>
+      )}
     </div>
   );
 };

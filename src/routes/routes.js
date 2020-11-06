@@ -4,6 +4,7 @@ import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import { Home } from '../pages/Home/Home';
 import { Survivor } from '../pages/Survivor/Survivor';
 import { Location } from '../pages/Location/Location';
+import { Flag } from '../pages/Flag/Flag';
 import { Navbar } from '../components/UI/Navbar/Navbar';
 
 export const Routes = () => {
@@ -14,6 +15,7 @@ export const Routes = () => {
         <Route path="/home" component={Home} />
         <Route path="/survivor" component={Survivor} />
         <Route path="/location" component={Location} />
+        <Route path="/flag" component={Flag} />
         <Redirect to="/home" />
       </Switch>
     </BrowserRouter>

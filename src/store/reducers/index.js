@@ -1,12 +1,12 @@
 import { combineReducers } from 'redux';
 import survivorReducer from './survivor';
-import infectedReducer from './infected';
+import flagReducer from './flag';
 import tradeReducer from './trade';
 import reportReducer from './report';
 
 export const rootReducer = combineReducers({
   survivor: survivorReducer,
-  infected: infectedReducer,
+  flag: flagReducer,
   trade: tradeReducer,
   report: reportReducer,
 });

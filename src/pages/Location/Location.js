@@ -74,6 +74,7 @@ export const Location = () => {
             <div className={classes.card_list}>
               {survivors.map(survivor => (
                 <SurvivorCard
+                  fullInfo
                   survivor={survivor}
                   key={survivor.id}
                   handleClick={() => handleSurvivor(survivor)}
@@ -97,7 +98,7 @@ export const Location = () => {
                   </TextField>
 
                   <div className={classes.card_survivor__input}>
-                    <TextField>Lat</TextField>
+                    <TextField fullWidth>Lat</TextField>
                     <Input
                       name="lat"
                       type={'number'}
@@ -108,7 +109,7 @@ export const Location = () => {
                   </div>
 
                   <div className={classes.card_survivor__input}>
-                    <TextField>Long</TextField>
+                    <TextField fullWidth>Long</TextField>
                     <Input
                       name="long"
                       type={'number'}

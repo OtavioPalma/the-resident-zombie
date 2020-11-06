@@ -470,5 +470,37 @@
       "name": "Non Binary",
       "value": "non_binary"
     }
+  ],
+  "flag": [
+    {
+      "witness_id": "e5a3760d-e5f4-4f63-9454-56514c111f12",
+      "suspect_id": "aa67dc9d-69e6-4248-a77f-49ef3b7adb81",
+      "id": 1
+    },
+    {
+      "witness_id": "aa67dc9d-69e6-4248-a77f-49ef3b7adb81",
+      "suspect_id": "e5a3760d-e5f4-4f63-9454-56514c111f12",
+      "id": 2
+    },
+    {
+      "witness_id": "4e02b95a-e558-4fd2-9432-ce1c5679930a",
+      "suspect_id": "e5a3760d-e5f4-4f63-9454-56514c111f12",
+      "id": 3
+    },
+    {
+      "witness_id": "4e02b95a-e558-4fd2-9432-ce1c5679930a",
+      "suspect_id": "aa67dc9d-69e6-4248-a77f-49ef3b7adb81",
+      "id": 4
+    },
+    {
+      "witness_id": "e5a3760d-e5f4-4f63-9454-56514c111f12",
+      "suspect_id": "4e02b95a-e558-4fd2-9432-ce1c5679930a",
+      "id": 5
+    },
+    {
+      "witness_id": "e5a3760d-e5f4-4f63-9454-56514c111f12",
+      "suspect_id": "9c8b23a1-2a30-400c-bcf2-d180bbdb11f1",
+      "id": 6
+    }
   ]
 }
