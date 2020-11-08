@@ -5,7 +5,6 @@ const initialState = {
   loading: false,
   genders: null,
   resources: null,
-  success: null,
   survivors: null,
 };
 
@@ -13,28 +12,24 @@ const addSurvivorStart = state => ({
   ...state,
   error: null,
   loading: true,
-  success: null,
 });
 
 const addSurvivorSuccess = state => ({
   ...state,
   error: null,
   loading: false,
-  success: true,
 });
 
 const addSurvivorFail = (state, payload) => ({
   ...state,
   error: payload.error,
   loading: false,
-  success: null,
 });
 
 const initSurvivorStart = state => ({
   ...state,
   error: null,
   loading: true,
-  success: null,
   genders: null,
   resources: null,
 });
@@ -77,19 +72,16 @@ const updateSurvivorStart = state => ({
   ...state,
   error: null,
   loading: true,
-  success: null,
 });
 
 const updateSurvivorSuccess = state => ({
   ...state,
   error: null,
-  success: true,
 });
 
 const updateSurvivorFail = (state, payload) => ({
   ...state,
   error: payload.error,
-  success: null,
 });
 
 const reducer = (state = initialState, { type, payload }) => {

@@ -8,7 +8,7 @@ import { Spinner } from '../../components/UI/Spinner/Spinner';
 import { Toast } from '../../components/UI/Toast/Toast';
 import { Header } from '../../components/UI/Header/Header';
 import { Card } from '../../components/UI/Card/Card';
-import { SurvivorCard } from '../../components/SurvivorCard/SurvivorCard';
+import { SurvivorsList } from '../../components/SurvivorsList/SurvivorsList';
 import { Button } from '../../components/UI/Button/Button';
 import { TextField } from '../../components/UI/TextField/TextField';
 
@@ -84,38 +84,24 @@ export const Flag = () => {
           <div>
             <span> Survivors List </span>
 
-            <div className={classes.card_list}>
-              {survivors.map(survivor => (
-                <SurvivorCard
-                  survivor={survivor}
-                  key={survivor.id}
-                  selected={survivor.id === report.witness?.id}
-                  handleClick={() => handleWitness(survivor)}
-                />
-              ))}
-            </div>
+            <SurvivorsList
+              survivors={survivors}
+              survivor={report.witness}
+              handleClick={handleWitness}
+            />
           </div>
 
           {report.witness && reports && (
             <div>
               <span> Select a Suspect </span>
 
-              <div className={classes.card_list}>
-                {survivors
-                  .filter(survivor => !reports.includes(survivor.id))
-                  .map(survivor => {
-                    if (survivor.id !== report.witness.id) {
-                      return (
-                        <SurvivorCard
-                          survivor={survivor}
-                          key={survivor.id}
-                          selected={survivor.id === report.suspect?.id}
-                          handleClick={() => handleSuspect(survivor)}
-                        />
-                      );
-                    }
-                  })}
-              </div>
+              <SurvivorsList
+                survivors={survivors.filter(
+                  el => !reports.includes(el.id) && el.id !== report.witness.id,
+                )}
+                survivor={report.suspect}
+                handleClick={handleSuspect}
+              />
             </div>
           )}
 

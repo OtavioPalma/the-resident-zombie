@@ -3,7 +3,6 @@ import * as actionTypes from '../actions/actionTypes';
 const initialState = {
   error: null,
   loading: false,
-  success: null,
   reports: null,
 };
 
@@ -11,21 +10,18 @@ const flagSurvivorStart = state => ({
   ...state,
   error: null,
   loading: true,
-  success: null,
 });
 
 const flagSurvivorSuccess = state => ({
   ...state,
   error: null,
   loading: false,
-  success: true,
 });
 
 const flagSurvivorFail = (state, payload) => ({
   ...state,
   error: payload.error,
   loading: false,
-  success: null,
 });
 
 const fetchSurvivorReportsStart = state => ({

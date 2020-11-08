@@ -8,10 +8,10 @@ import { Spinner } from '../../components/UI/Spinner/Spinner';
 import { Input } from '../../components/UI/Input/Input';
 import { Button } from '../../components/UI/Button/Button';
 import { Toast } from '../../components/UI/Toast/Toast';
-import { SurvivorCard } from '../../components/SurvivorCard/SurvivorCard';
 import { TextField } from '../../components/UI/TextField/TextField';
 import { Card } from '../../components/UI/Card/Card';
 import { Header } from '../../components/UI/Header/Header';
+import { SurvivorsList } from '../../components/SurvivorsList/SurvivorsList';
 
 export const Location = () => {
   const [survivor, setSurvivor] = useState(null);
@@ -20,7 +20,6 @@ export const Location = () => {
   /* Redux Selectors */
   const loading = useSelector(state => state.survivor.loading);
   const error = useSelector(state => state.survivor.error);
-  const success = useSelector(state => state.survivor.success);
   const survivors = useSelector(state => state.survivor.survivors);
 
   /* Redux Dispatchers */
@@ -61,7 +60,6 @@ export const Location = () => {
         <span>Update your current location so others can find you!</span>
       </Header>
 
-      {success && <Toast message={'Survivor Updated!'} type="success" />}
       {error && <Toast message={`Error: ${error}`} type="error" />}
 
       {loading && <Spinner />}
@@ -71,17 +69,12 @@ export const Location = () => {
           <div>
             <span> Survivors List </span>
 
-            <div className={classes.card_list}>
-              {survivors.map(surv => (
-                <SurvivorCard
-                  fullInfo
-                  selected={survivor?.id === surv.id}
-                  survivor={surv}
-                  key={surv.id}
-                  handleClick={() => handleSurvivor(surv)}
-                />
-              ))}
-            </div>
+            <SurvivorsList
+              fullInfo
+              survivor={survivor}
+              survivors={survivors}
+              handleClick={handleSurvivor}
+            />
           </div>
 
           <div>

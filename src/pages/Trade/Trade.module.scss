@@ -1,0 +1,15 @@
+.trade {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  &_items {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  &_value {
+    width: 60%;
+    margin: 0 auto;
+  }
+}

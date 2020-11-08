@@ -5,6 +5,7 @@ import { Home } from '../pages/Home/Home';
 import { Survivor } from '../pages/Survivor/Survivor';
 import { Location } from '../pages/Location/Location';
 import { Flag } from '../pages/Flag/Flag';
+import { Trade } from '../pages/Trade/Trade';
 import { Navbar } from '../components/UI/Navbar/Navbar';
 
 export const Routes = () => {
@@ -16,6 +17,7 @@ export const Routes = () => {
         <Route path="/survivor" component={Survivor} />
         <Route path="/location" component={Location} />
         <Route path="/flag" component={Flag} />
+        <Route path="/trade" component={Trade} />
         <Redirect to="/home" />
       </Switch>
     </BrowserRouter>

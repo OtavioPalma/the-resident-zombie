@@ -1,12 +1,4 @@
 .card {
-  &_list {
-    overflow-y: scroll;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    max-height: 50vh;
-  }
-
   &_text {
     font-family: 'Shadows Into Light', cursive;
     font-size: 2em;

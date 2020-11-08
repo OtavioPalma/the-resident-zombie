@@ -34,7 +34,6 @@ export const Survivor = () => {
   const error = useSelector(state => state.survivor.error);
   const genders = useSelector(state => state.survivor.genders);
   const resources = useSelector(state => state.survivor.resources);
-  const success = useSelector(state => state.survivor.success);
 
   /* Redux Dispatchers */
   const dispatch = useDispatch();
@@ -103,7 +102,6 @@ export const Survivor = () => {
         </span>
       </Header>
 
-      {success && <Toast message={'Survivor Registered!'} type="success" />}
       {error && <Toast message={`Error: ${error}`} type="error" />}
 
       {loading && <Spinner />}

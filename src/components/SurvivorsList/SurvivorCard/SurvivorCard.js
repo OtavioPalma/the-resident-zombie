@@ -2,9 +2,9 @@ import React from 'react';
 
 import classes from './SurvivorCard.module.scss';
 
-import male from '../../assets/icons/male.svg';
-import female from '../../assets/icons/female.svg';
-import non_binary from '../../assets/icons/non_binary.svg';
+import male from '../../../assets/icons/male.svg';
+import female from '../../../assets/icons/female.svg';
+import non_binary from '../../../assets/icons/non_binary.svg';
 
 export const SurvivorCard = ({ survivor, handleClick, fullInfo, selected }) => {
   return (
