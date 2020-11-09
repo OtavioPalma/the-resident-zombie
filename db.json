@@ -182,5 +182,11 @@
       "value": "non_binary"
     }
   ],
-  "flag": []
+  "flag": [
+    {
+      "witness_id": "201f2168-ce7d-4bbc-9eaf-69a99ab94d1f",
+      "suspect_id": "4c15fd35-9eb6-4a6f-9202-2ab38b542256",
+      "id": 1
+    }
+  ]
 }

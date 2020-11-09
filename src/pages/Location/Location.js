@@ -4,10 +4,10 @@ import { useDispatch, useSelector } from 'react-redux';
 import classes from './Location.module.scss';
 import * as actions from '../../store/actions/index';
 
-import { Spinner } from '../../components/UI/Spinner/Spinner';
+import { Toast } from '../../shared/Toast/Toast';
+import { Spinner } from '../../shared/Spinner/Spinner';
 import { Input } from '../../components/UI/Input/Input';
 import { Button } from '../../components/UI/Button/Button';
-import { Toast } from '../../components/UI/Toast/Toast';
 import { TextField } from '../../components/UI/TextField/TextField';
 import { Card } from '../../components/UI/Card/Card';
 import { Header } from '../../components/UI/Header/Header';

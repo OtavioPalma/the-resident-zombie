@@ -4,8 +4,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import classes from './Trade.module.scss';
 import * as actions from '../../store/actions/index';
 
-import { Spinner } from '../../components/UI/Spinner/Spinner';
-import { Toast } from '../../components/UI/Toast/Toast';
+import { Toast } from '../../shared/Toast/Toast';
+import { Spinner } from '../../shared/Spinner/Spinner';
 import { Header } from '../../components/UI/Header/Header';
 import { Card } from '../../components/UI/Card/Card';
 import { Button } from '../../components/UI/Button/Button';

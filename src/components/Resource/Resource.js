@@ -7,7 +7,7 @@ import { TextField } from '../UI/TextField/TextField';
 
 export const Resource = props => {
   return (
-    <div className={classes.container}>
+    <div className={classes.resource}>
       <IconButton content="-" handleClick={props.handleDecrease} />
 
       <Item itemName={props.name} icon={props.icon} />

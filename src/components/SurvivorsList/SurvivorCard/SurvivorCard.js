@@ -9,16 +9,16 @@ import non_binary from '../../../assets/icons/non_binary.svg';
 export const SurvivorCard = ({ survivor, handleClick, fullInfo, selected }) => {
   return (
     <div
-      className={`${classes.container} ${selected && classes.selected}`}
+      className={`${classes.survivor} ${selected && classes.selected}`}
       onClick={handleClick}
     >
       <div>
         <img
-          className={classes.container_icon}
+          className={classes.survivor_icon}
           src={
-            survivor.gender === 'male'
+            survivor?.gender === 'male'
               ? male
-              : survivor.gender === 'female'
+              : survivor?.gender === 'female'
               ? female
               : non_binary
           }
@@ -27,24 +27,24 @@ export const SurvivorCard = ({ survivor, handleClick, fullInfo, selected }) => {
 
       {fullInfo ? (
         <div>
-          <div className={classes.container_line}>
+          <div className={classes.survivor_line}>
             <span>Info:</span>
             <span>
-              {survivor.name}, {survivor.age}
+              {survivor?.name}, {survivor?.age}
             </span>
           </div>
 
-          <div className={classes.container_line}>
+          <div className={classes.survivor_line}>
             <span>Location:</span>
             <span>
-              {survivor.lat}, {survivor.long}
+              {survivor?.lat}, {survivor?.long}
             </span>
           </div>
         </div>
       ) : (
-        <div className={classes.container_line}>
+        <div className={classes.survivor_line}>
           <span>
-            {survivor.name}, {survivor.age}
+            {survivor?.name}, {survivor?.age}
           </span>
         </div>
       )}

@@ -4,19 +4,19 @@ import { useDispatch, useSelector } from 'react-redux';
 import classes from './Survivor.module.scss';
 import * as actions from '../../store/actions/index';
 
+import { Toast } from '../../shared/Toast/Toast';
+import { Spinner } from '../../shared/Spinner/Spinner';
 import { Input } from '../../components/UI/Input/Input';
 import { Select } from '../../components/UI/Select/Select';
 import { Button } from '../../components/UI/Button/Button';
-import { Spinner } from '../../components/UI/Spinner/Spinner';
+import { Resource } from '../../components/Resource/Resource';
+import { Card } from '../../components/UI/Card/Card';
+import { Header } from '../../components/UI/Header/Header';
 
 import fiji_water from '../../assets/icons/fiji_water.svg';
 import campbell_soup from '../../assets/icons/campbell_soup.svg';
 import first_aid from '../../assets/icons/first_aid.svg';
 import ak_47 from '../../assets/icons/ak_47.svg';
-import { Resource } from '../../components/Resource/Resource';
-import { Toast } from '../../components/UI/Toast/Toast';
-import { Card } from '../../components/UI/Card/Card';
-import { Header } from '../../components/UI/Header/Header';
 
 export const Survivor = () => {
   const [survivor, setSurvivor] = useState({

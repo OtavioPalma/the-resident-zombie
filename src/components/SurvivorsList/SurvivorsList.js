@@ -7,7 +7,7 @@ import { SurvivorCard } from './SurvivorCard/SurvivorCard';
 export const SurvivorsList = props => {
   return (
     <div className={classes.survivors_list}>
-      {props.survivors.map(survivor => (
+      {props.survivors?.map(survivor => (
         <SurvivorCard
           survivor={survivor}
           key={survivor.id}
