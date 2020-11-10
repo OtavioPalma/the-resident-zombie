@@ -29,8 +29,10 @@ export const Trade = () => {
   /* Redux Dispatchers */
   const dispatch = useDispatch();
   const onFetchSurvivors = () => dispatch(actions.fetchSurvivors());
-  const onUpdateSurvivor = survivor =>
-    dispatch(actions.updateSurvivor(survivor));
+  const onTradeItems = (survivorId, consumerId, payment, pick) =>
+    dispatch(
+      actions.tradeItems({ survivorId, trade: { consumerId, payment, pick } }),
+    );
 
   useEffect(() => {
     onFetchSurvivors();
@@ -40,8 +42,7 @@ export const Trade = () => {
     setTrade({
       ...trade,
       [`survivor${number}`]: survivor,
-      [`trade${number}`]: survivor.inventory.map(surv => ({
-        ...surv,
+      [`trade${number}`]: survivor.inventory.map(() => ({
         amount: 0,
       })),
     });
@@ -93,31 +94,26 @@ export const Trade = () => {
   };
 
   const handleValue = number => {
-    return trade[`trade${number}`].reduce((prevValue, nextValue) => {
-      return prevValue + nextValue.amount * nextValue.points;
-    }, 0);
+    let points = [14, 12, 10, 8];
+
+    return trade[`trade${number}`].reduce(
+      (prevValue, nextValue, index) =>
+        prevValue + nextValue.amount * points[index],
+      0,
+    );
   };
 
   const handleSubmit = () => {
     if (handleValue('One') === handleValue('Two')) {
-      const survivorOne = {
-        ...trade.survivorOne,
-        inventory: trade.survivorOne.inventory.map((item, index) => ({
-          ...item,
-          amount: item.amount + trade.tradeTwo[index].amount,
-        })),
-      };
+      const survivorOne = trade.tradeOne.map(item => item.amount);
+      const survivorTwo = trade.tradeTwo.map(item => item.amount);
 
-      const survivorTwo = {
-        ...trade.survivorTwo,
-        inventory: trade.survivorTwo.inventory.map((item, index) => ({
-          ...item,
-          amount: item.amount + trade.tradeOne[index].amount,
-        })),
-      };
-
-      onUpdateSurvivor(survivorOne);
-      onUpdateSurvivor(survivorTwo);
+      onTradeItems(
+        trade.survivorOne._id,
+        trade.survivorTwo._id,
+        survivorOne,
+        survivorTwo,
+      );
 
       setTrade({
         survivorOne: null,
@@ -197,7 +193,7 @@ export const Trade = () => {
               {!trade.survivorTwo ? (
                 <SurvivorsList
                   survivors={survivors.filter(
-                    surv => surv.id !== trade.survivorOne.id,
+                    surv => surv._id !== trade.survivorOne._id,
                   )}
                   handleClick={survivor => handleTrade(survivor, 'Two')}
                 />

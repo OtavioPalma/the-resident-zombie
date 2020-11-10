@@ -24,9 +24,9 @@ describe('SurvivorsList with no Props', () => {
 
 describe('SurvivorsList with Props', () => {
   const initialProps = {
-    survivors: [{ id: 0 }, { id: 1 }, { id: 2 }],
+    survivors: [{ _id: 0 }, { _id: 1 }, { _id: 2 }],
     fullInfo: true,
-    survivor: { id: 1 },
+    survivor: { _id: 1 },
     handleClick: jest.fn(),
   };
 
@@ -38,21 +38,21 @@ describe('SurvivorsList with Props', () => {
 
   it('should have rendered each Survivor with the received props', () => {
     expect(wrapper.find(SurvivorCard).at(0).props()).toEqual({
-      survivor: { id: 0 },
+      survivor: { _id: 0 },
       fullInfo: true,
       handleClick: expect.any(Function),
       selected: false,
     });
 
     expect(wrapper.find(SurvivorCard).at(1).props()).toEqual({
-      survivor: { id: 1 },
+      survivor: { _id: 1 },
       fullInfo: true,
       handleClick: expect.any(Function),
       selected: true,
     });
 
     expect(wrapper.find(SurvivorCard).at(2).props()).toEqual({
-      survivor: { id: 2 },
+      survivor: { _id: 2 },
       fullInfo: true,
       handleClick: expect.any(Function),
       selected: false,

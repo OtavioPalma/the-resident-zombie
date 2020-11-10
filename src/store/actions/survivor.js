@@ -1,5 +1,4 @@
 import * as actionTypes from './actionTypes';
-import { v4 as uuid } from 'uuid';
 import axios from '../../Axios';
 
 export const addSurvivorStart = () => ({
@@ -19,13 +18,8 @@ export const addSurvivor = payload => {
   return dispatch => {
     dispatch(addSurvivorStart());
 
-    const newSurvivor = {
-      id: uuid(),
-      ...payload.survivor,
-    };
-
     axios
-      .post('/people', newSurvivor)
+      .post('/people', payload.survivor)
       .then(() => {
         dispatch(addSurvivorSuccess());
       })
@@ -53,12 +47,10 @@ export const initSurvivor = () => {
   return dispatch => {
     dispatch(initSurvivorStart());
 
-    // eslint-disable-next-line no-undef
-    Promise.all([axios.get('/genders'), axios.get('/resources')])
+    axios
+      .get('/resources')
       .then(res => {
-        dispatch(
-          initSurvivorSuccess({ genders: res[0].data, resources: res[1].data }),
-        );
+        dispatch(initSurvivorSuccess({ resources: res.data.data }));
       })
       .catch(err => {
         dispatch(initSurvivorFail({ error: err }));
@@ -87,7 +79,7 @@ export const fetchSurvivors = () => {
     axios
       .get('/people')
       .then(res => {
-        dispatch(fetchSurvivorsSuccess({ survivors: res.data }));
+        dispatch(fetchSurvivorsSuccess({ survivors: res.data.data }));
       })
       .catch(err => {
         dispatch(fetchSurvivorsFail({ error: err }));
@@ -113,7 +105,7 @@ export const updateSurvivor = payload => {
     dispatch(updateSurvivorStart());
 
     axios
-      .put(`/people/${payload.id}`, payload)
+      .patch(`/people/${payload._id}`, payload)
       .then(() => {
         dispatch(updateSurvivorSuccess());
         dispatch(fetchSurvivors());

@@ -3,7 +3,6 @@ import * as actionTypes from '../actions/actionTypes';
 const initialState = {
   error: null,
   loading: false,
-  genders: null,
   resources: null,
   survivors: null,
 };
@@ -30,7 +29,6 @@ const initSurvivorStart = state => ({
   ...state,
   error: null,
   loading: true,
-  genders: null,
   resources: null,
 });
 
@@ -38,7 +36,6 @@ const initSurvivorSuccess = (state, payload) => ({
   ...state,
   error: null,
   loading: false,
-  genders: payload.genders,
   resources: payload.resources,
 });
 

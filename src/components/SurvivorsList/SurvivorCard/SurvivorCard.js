@@ -10,8 +10,13 @@ export const SurvivorCard = ({ survivor, handleClick, fullInfo, selected }) => {
   return (
     <div
       className={`${classes.survivor} ${selected && classes.selected}`}
-      onClick={handleClick}
+      onClick={survivor?.infection < 5 ? handleClick : () => {}}
     >
+      {survivor?.infection >= 5 && (
+        <div className={classes.infected}>
+          <span>INFECTED</span>
+        </div>
+      )}
       <div>
         <img
           className={classes.survivor_icon}
@@ -37,7 +42,7 @@ export const SurvivorCard = ({ survivor, handleClick, fullInfo, selected }) => {
           <div className={classes.survivor_line}>
             <span>Location:</span>
             <span>
-              {survivor?.lat}, {survivor?.long}
+              {survivor?.latitude}, {survivor?.longitude}
             </span>
           </div>
         </div>

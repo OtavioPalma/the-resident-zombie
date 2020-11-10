@@ -11,6 +11,7 @@ import { Card } from '../../components/UI/Card/Card';
 import { SurvivorsList } from '../../components/SurvivorsList/SurvivorsList';
 import { Button } from '../../components/UI/Button/Button';
 import { TextField } from '../../components/UI/TextField/TextField';
+import { Modal } from '../../components/UI/Modal/Modal';
 
 export const Flag = () => {
   const [report, setReport] = useState({ witness: null, suspect: null });
@@ -21,6 +22,7 @@ export const Flag = () => {
   const survivorLoading = useSelector(state => state.survivor.loading);
   const survivorError = useSelector(state => state.survivor.error);
   const survivors = useSelector(state => state.survivor.survivors);
+  const suspect = useSelector(state => state.flag.suspect);
   const reports = useSelector(state => state.flag.reports);
   const flagLoading = useSelector(state => state.flag.loading);
   const flagError = useSelector(state => state.flag.error);
@@ -31,6 +33,7 @@ export const Flag = () => {
   const onFetchSurvivors = () => dispatch(actions.fetchSurvivors());
   const onFlagSurvivor = (witness, suspect) =>
     dispatch(actions.flagSurvivor({ witness, suspect }));
+  const onFlagSurvivorReset = () => dispatch(actions.flagSurvivorReset());
   const onFetchSurvivorReports = witness =>
     dispatch(actions.fetchSurvivorReports({ witness }));
 
@@ -59,6 +62,11 @@ export const Flag = () => {
     }
   };
 
+  const handleResetSuspect = () => {
+    onFlagSurvivorReset();
+    onFetchSurvivors();
+  };
+
   return (
     <div className="container">
       <Header>
@@ -75,6 +83,15 @@ export const Flag = () => {
 
       {survivorError && (
         <Toast message={`Survivor Error: ${survivorError}`} type="error" />
+      )}
+
+      {suspect?.infection >= 5 && (
+        <Modal
+          title="Survivor Infected!"
+          description={`${suspect?.name} is now a ZOMBIE!`}
+          handleClick={handleResetSuspect}
+          show={suspect?.infection >= 5}
+        />
       )}
 
       {(survivorLoading || flagLoading) && <Spinner />}
@@ -97,7 +114,8 @@ export const Flag = () => {
 
               <SurvivorsList
                 survivors={survivors.filter(
-                  el => !reports.includes(el.id) && el.id !== report.witness.id,
+                  el =>
+                    !reports.includes(el._id) && el._id !== report.witness._id,
                 )}
                 survivor={report.suspect}
                 handleClick={handleSuspect}

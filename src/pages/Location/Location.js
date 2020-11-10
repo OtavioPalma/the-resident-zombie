@@ -33,6 +33,7 @@ export const Location = () => {
   }, []);
 
   useEffect(() => {
+    console.log(invalid);
     if (invalid.length === 0) {
       onUpdateSurvivor(survivor);
       setSurvivor(null);
@@ -49,7 +50,11 @@ export const Location = () => {
   };
 
   const handleSubmit = () => {
-    setInvalid(Object.keys(survivor).filter(field => !survivor[field]));
+    setInvalid(
+      Object.keys(survivor).filter(
+        field => survivor[field] === null || survivor[field] === '',
+      ),
+    );
   };
 
   return (
@@ -94,9 +99,9 @@ export const Location = () => {
                   <div className={classes.card_survivor__input}>
                     <TextField fullWidth>Lat</TextField>
                     <Input
-                      name="lat"
+                      name="latitude"
                       type={'number'}
-                      inputValue={survivor.lat}
+                      inputValue={survivor.latitude}
                       handleChange={handleChange}
                       error={invalid}
                     />
@@ -105,9 +110,9 @@ export const Location = () => {
                   <div className={classes.card_survivor__input}>
                     <TextField fullWidth>Long</TextField>
                     <Input
-                      name="long"
+                      name="longitude"
                       type={'number'}
-                      inputValue={survivor.long}
+                      inputValue={survivor.longitude}
                       handleChange={handleChange}
                       error={invalid}
                     />

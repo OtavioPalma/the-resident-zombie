@@ -10,10 +10,10 @@ export const SurvivorsList = props => {
       {props.survivors?.map(survivor => (
         <SurvivorCard
           survivor={survivor}
-          key={survivor.id}
+          key={survivor._id}
           handleClick={() => props.handleClick(survivor)}
           fullInfo={props.fullInfo}
-          selected={props.survivor?.id === survivor.id}
+          selected={props.survivor?._id === survivor._id}
         />
       ))}
     </div>

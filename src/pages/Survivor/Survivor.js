@@ -23,8 +23,8 @@ export const Survivor = () => {
     name: '',
     age: '',
     gender: '',
-    lat: '',
-    long: '',
+    latitude: '',
+    longitude: '',
     inventory: [],
   });
   const [invalid, setInvalid] = useState(['init']);
@@ -32,13 +32,19 @@ export const Survivor = () => {
   /* Redux Selectors */
   const loading = useSelector(state => state.survivor.loading);
   const error = useSelector(state => state.survivor.error);
-  const genders = useSelector(state => state.survivor.genders);
   const resources = useSelector(state => state.survivor.resources);
 
   /* Redux Dispatchers */
   const dispatch = useDispatch();
   const onInitSurvivor = () => dispatch(actions.initSurvivor());
   const onAddSurvivor = survivor => dispatch(actions.addSurvivor({ survivor }));
+
+  const genders = [
+    { name: 'Survivor Gender', value: '' },
+    { name: 'Male', value: 'male' },
+    { name: 'Female', value: 'female' },
+    { name: 'Non Binary', value: 'non_binary' },
+  ];
 
   useEffect(() => {
     onInitSurvivor();
@@ -48,7 +54,11 @@ export const Survivor = () => {
     resources &&
       setSurvivor({
         ...survivor,
-        inventory: resources.map(res => ({ ...res, amount: 0 })),
+        inventory: resources.map(res => ({
+          resourceId: res._id,
+          name: res.name,
+          amount: 0,
+        })),
       });
   }, [resources]);
 
@@ -59,8 +69,8 @@ export const Survivor = () => {
         name: '',
         age: '',
         gender: '',
-        lat: '',
-        long: '',
+        latitude: '',
+        longitude: '',
         inventory: [],
       });
       onInitSurvivor();
@@ -138,19 +148,19 @@ export const Survivor = () => {
             />
 
             <Input
-              name="lat"
+              name="latitude"
               type={'number'}
               placeholder={'Latitude'}
-              inputValue={survivor.lat}
+              inputValue={survivor.latitude}
               handleChange={handleChange}
               error={invalid}
             />
 
             <Input
-              name="long"
+              name="longitude"
               type={'number'}
               placeholder={'Longitude'}
-              inputValue={survivor.long}
+              inputValue={survivor.longitude}
               handleChange={handleChange}
               error={invalid}
             />

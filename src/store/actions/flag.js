@@ -5,8 +5,9 @@ export const flagSurvivorStart = () => ({
   type: actionTypes.FLAG_SURVIVOR_START,
 });
 
-export const flagSurvivorSuccess = () => ({
+export const flagSurvivorSuccess = payload => ({
   type: actionTypes.FLAG_SURVIVOR_SUCCESS,
+  payload,
 });
 
 export const flagSurvivorFail = payload => ({
@@ -19,21 +20,26 @@ export const flagSurvivor = payload => {
     dispatch(flagSurvivorStart());
 
     const newFlag = {
-      witness_id: payload.witness.id,
-      suspect_id: payload.suspect.id,
+      infectedId: payload.suspect._id,
     };
 
     axios
-      .post('/flag', newFlag)
-      .then(() => {
-        dispatch(flagSurvivorSuccess());
+      .post(`/people/${payload.witness._id}/infections`, newFlag)
+      .then(res => {
+        dispatch(
+          flagSurvivorSuccess({ suspect: res.data.data.infectionSuspect }),
+        );
       })
       .catch(err => {
         dispatch(flagSurvivorFail({ error: err }));
       });
   };
 };
-///////////////////////
+
+export const flagSurvivorReset = () => ({
+  type: actionTypes.FLAG_SURVIVOR_RESET,
+});
+
 export const fetchSurvivorReportsStart = () => ({
   type: actionTypes.FETCH_SURVIVOR_REPORTS_START,
 });
@@ -52,14 +58,14 @@ export const fetchSurvivorReports = payload => {
   return dispatch => {
     dispatch(fetchSurvivorReportsStart());
 
-    const survivorId = payload.witness.id;
+    const survivorId = payload.witness._id;
 
     axios
-      .get(`/flag?witness_id=${survivorId}`)
+      .get(`/people/${survivorId}/infections`)
       .then(res => {
         dispatch(
           fetchSurvivorReportsSuccess({
-            reports: res.data.map(el => el.suspect_id),
+            reports: res.data.data.map(el => el.idInfected),
           }),
         );
       })

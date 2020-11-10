@@ -16,7 +16,14 @@ describe('SurvivorCard with no Props', () => {
 
 describe('SurvivorCard with Props', () => {
   const initialProps = {
-    survivor: { gender: 'male', name: 'Otavio', age: 22, lat: 12, long: 34 },
+    survivor: {
+      gender: 'male',
+      name: 'Otavio',
+      age: 22,
+      latitude: 12,
+      longitude: 34,
+      infection: 0,
+    },
     handleClick: jest.fn(),
     fullInfo: true,
     selected: true,
@@ -51,8 +58,9 @@ describe('SurvivorCard with other Props', () => {
       gender: 'female',
       name: 'Giovanna',
       age: 23,
-      lat: 12,
-      long: 34,
+      latitude: 12,
+      longitude: 34,
+      infection: 0,
     },
     handleClick: jest.fn(),
     fullInfo: false,
