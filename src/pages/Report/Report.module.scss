@@ -1,0 +1,42 @@
+.percentage {
+  font-size: 5em !important;
+  color: #f0f0f0 !important;
+  font-weight: 900 !important;
+}
+
+.items {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: flex-start;
+
+  &_item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &_amount {
+    font-size: 3em !important;
+    color: #f0f0f0 !important;
+    font-weight: 900 !important;
+  }
+}
+
+.infected {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &_value {
+    font-size: 5em !important;
+    color: #f0f0f0 !important;
+    font-weight: 900 !important;
+  }
+
+  &_text {
+    font-size: 2em !important;
+    color: #f0f0f0 !important;
+    font-weight: 900 !important;
+  }
+}

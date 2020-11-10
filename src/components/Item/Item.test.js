@@ -15,8 +15,8 @@ describe('Item with no Props', () => {
     expect(wrapper.find('img').length).toEqual(1);
   });
 
-  it('should have only 1 span (since amount < 0)', () => {
-    expect(wrapper.find('span').length).toEqual(1);
+  it('should not have any span (since amount < 0 and itemName is null)', () => {
+    expect(wrapper.find('span').length).toEqual(0);
   });
 
   it('should have proper props for div', () => {
@@ -53,6 +53,11 @@ describe('Item with Props', () => {
       className: 'item_amount',
       children: 0,
     });
+  });
+
+  it('should hide the itemName if it is null', () => {
+    const newWrapper = shallow(<Item />);
+    expect(newWrapper.find('.item_name').length).toEqual(0);
   });
 
   it('should hide the amount if lesser than 0', () => {

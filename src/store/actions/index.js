@@ -8,3 +8,10 @@ export {
 export { flagSurvivor, fetchSurvivorReports, flagSurvivorReset } from './flag';
 
 export { tradeItems } from './trade';
+
+export {
+  fetchInfected,
+  fetchInventory,
+  fetchNonInfected,
+  fetchLostPoints,
+} from './report';
