@@ -15,6 +15,6 @@ describe('Logo with Props', () => {
       'onClick',
       expect.any(Function),
     );
-    expect(wrapper.find('img').props()).toHaveProperty('src', 'logo.png');
+    expect(wrapper.find('img').props()).toHaveProperty('src', 'logo.webp');
   });
 });
