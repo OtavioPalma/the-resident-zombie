@@ -1,70 +1,75 @@
-# Getting Started with Create React App
+# The Resident Zombie (Frontend)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React and Redux project that allows survivors of an apocalypse to share items and their locations.
 
-## Available Scripts
+## Getting Started
 
-In the project directory, you can run:
+These instructions will get you a copy of the project up and running on your local machine.
 
-### `yarn start`
+### Make sure to configure the backend project before proceeding
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Clone or Download the Project
+- Run `yarn install` to install the dependencies in the local node_modules folder.
+- Run `yarn start`, the dev server will load and open in your default web browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+# How to Interact to the System
 
-### `yarn test`
+## HOME
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Information about me and the system
 
-### `yarn build`
+## ADD SURVIVOR
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Register yourself as a survivor and keep the system alive!
+- Here we have a form to fill with the survivor information.
+- We also have access to the survivor inventory, be sure to select every item you
+  have here, since you won't be able to change it later but from trades!
+- After fill every field and choose your items click `Create` to register your survivor.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## UPDATE LOCATION
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Been moving recently? Let others know of your last location!
+- Here we have a Survivors List where you should select yourself.
+- As soon as you select yourself upon the list a form will appear with your current coordinates, feel free to edit it.
+- Click on `Save` to save the updated location.
 
-### `yarn eject`
+## FLAG SURVIVOR
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Suspects someone has turned into a zombie? Report as soon as possible!
+- Here we have a list of survivors where you should select yourself.
+- As soon as you select yourself, another list pops up, here you should select the suspect survivor.
+- Before confirm the report you should read the action column to ensure your selections are correct!
+- Click on `Flag` to report the suspect!
+- If the suspect was reported by another four survivors he gets flagged as INFECTED, you gain his inventory items and no one can interact with the infected survivor anymore.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## TRADE ITEMS
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- Trade your items with other survivors!
+- Here we have a list of survivors where you should select yourself.
+- As soon as you select yourself another list pops up and your inventory appears side by side to a trade list.
+- When you click in an item you should see the `trade column item's counter` increase and the `inventory column item's counter` decrease.
+- In order to the trade be completed you should accumulate the same points of the other survivor, you can check it in the `Value` label below the items list.
+- If the value is the same for both survivors the button `Trade` will be enabled, click it to confirm the trade!
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## REPORTS
 
-## Learn More
+- Check information and statistics from every survivor registered (and infected) on the platform!
+- Here we have information about the infection percentage, average items per survivor (non infected ones) and the amount of points lost by infections.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Tests
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Run `yarn test` to check tests validities
 
-### Code Splitting
+## Built With
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- React v17.0.1
+- Create React App v4.0.0
+- Redux v4.0.5
+- React-Redux v7.2.2
 
-### Analyzing the Bundle Size
+## Missing Features
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Application responsiveness
+- Google Maps API integration to select location
+- False position security measure
+- Solution to weapon problem
